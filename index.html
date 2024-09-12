@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,34 +15,139 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #e0e7ec;
             color: #333;
             padding: 2%;
-            line-height: 1.6;
+            line-height: 1.8;
         }
+
+        /* Title Section */
+        #title-section {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #007bff, #28a745);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+}
+
+#title-section:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Enhanced title styling */
+#title-section h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 3.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    border-bottom: 5px solid #fff;
+    padding-bottom: 10px;
+    display: inline-block;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+/* Styling for project author and details */
+#title-section p {
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Project author's name styling */
+#title-section .author {
+    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #ffdd57;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* College name styling */
+#title-section .college {
+    font-size: 1.3rem;
+    color: #f1f1f1;
+}
+
+/* Guide heading styling */
+#title-section .guide {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Guide info styling */
+#title-section .guide-info {
+    font-size: 1.3rem;
+    color: #d4e157;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effects for the entire title section */
+#title-section p:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: scale(1.05);
+}
 
         /* Buttons for Section Headings */
         .btn-section {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 5px;
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            text-decoration: none;
+            padding: 15px 35px;
+            font-size: 16px;
             font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #28a745, #218838);
             border: none;
-            border-radius: 25px;
-            font-size: 14px;
+            border-radius: 50px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-section:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.15);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        }
+
+        .btn-section:hover:before {
+        left: 100%;
         }
 
         .btn-section:hover {
-            background-color: #0056b3;
+            background: linear-gradient(45deg, #218838, #1e7e34);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
             transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-section:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
         }
 
         /* Main Container */
@@ -50,7 +156,7 @@
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             transition: box-shadow 0.3s ease;
         }
 
@@ -59,82 +165,17 @@
         }
 
         /* Heading Styles */
-        h1, h2, h3 {
-            font-family: 'Arial Black', sans-serif;
-            color: #007bff;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            border-bottom: 4px solid #007bff;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
         h2 {
             font-size: 2rem;
             margin-bottom: 15px;
         }
 
-        h3 {
-            font-size: 1.75rem;
-            margin-bottom: 10px;
-        }
-
-        h4, h5 {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #555;
-        }
-
-        /* Paragraph Styles */
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-            font-size: 1.1rem;
-        }
-
-        /* Styling sections */
         .section {
             margin-bottom: 40px;
             padding: 20px;
             border-left: 5px solid #007bff;
             background-color: #f9f9fb;
             border-radius: 5px;
-        }
-
-        /* Table of Contents for Quick Navigation */
-        #toc {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        /* Image Styling */
-        img {
-            width: 80%;
-            display: block;
-            margin: 20px auto;
-            border: 3px solid #333;
-            border-radius: 10px;
-        }
-
-        /* Certificate Image Styling */
-        #certificate img {
-            width: 50%;
-            display: block;
-            margin: 0 auto;
-            border: 2px solid #007bff;
-            border-radius: 10px;
-        }
-
-        /* Code Block Styling */
-        code {
-            background-color: #f1f1f1;
-            padding: 5px;
-            border-radius: 3px;
-            font-size: 1rem;
-            color: #d63384;
         }
 
         /* Footer Styling */
@@ -144,10 +185,72 @@
             font-size: 14px;
             color: #777;
         }
+        /* Styled Show Certificate Button */
+.btn-show-certificate {
+    display: inline-block;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #28a745, #218838);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-show-certificate:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.15);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+    }
+
+    .btn-show-certificate:hover:before {
+        left: 100%;
+    }
+
+    .btn-show-certificate:hover {
+        background: linear-gradient(45deg, #218838, #1e7e34);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px);
+    }
+
+    .btn-show-certificate:active {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+    }
+    #toc{
+        padding-left: 3%;
+        padding-bottom: 5%;
+    }
+
+
+
     </style>
 </head>
+
 <body>
 
+    <!-- Title Section -->
+    <div id="title-section">
+        <h1>SAVING IMAGE AT ANY LOCATION USING OPEN CV</h1>
+        <p>Yaroju Madhu Kumar</p> <br>
+        <p class="author">20671A1939</p> <br>
+        <p class="college">J.B INSTITUTE OF ENGINEERING AND TECHNOLOGY</p> <br>
+        <p class="guide">Under the Guidance of</p> <br>
+        <p class="guide-info">Srinivasan.N (Branch Manager) Pantech E Learning Pvt Ltd</p>
+    </div>
+
+    <!-- Table of Contents Section -->
     <div id="toc">
         <button class="btn-section" onclick="document.getElementById('abstract').scrollIntoView();">Abstract</button>
         <button class="btn-section" onclick="document.getElementById('intro').scrollIntoView();">Introduction</button>
@@ -157,9 +260,12 @@
         <button class="btn-section" onclick="document.getElementById('result').scrollIntoView();">Result</button>
         <button class="btn-section" onclick="document.getElementById('conclusion').scrollIntoView();">Conclusion</button>
         <button class="btn-section" onclick="document.getElementById('references').scrollIntoView();">References</button>
+        <!-- <button class="btn-section" onclick="document.getElementById('certificate').scrollIntoView();">Certificate</button> -->
     </div>
 
+    <!-- Main content continues here -->
     <div id="main">
+        <!-- Rest of the sections: Abstract, Introduction, etc. -->
         <div id="abstract" class="section">
             <h2>Abstract</h2>
             <p>
@@ -215,9 +321,9 @@
             <p>
                 The application successfully captures images and videos from the webcam while allowing users to apply filters and add timestamps. Users can save media in their desired format, making it a versatile tool for both personal and professional use.
             </p>
-            <img src="Screenshot 2024-07-27 130432.png" alt="Captured img">
-            <img src="image_1.jpg" alt="Captured img">
-            <img src="image_2.jpg" alt="Captured img">
+            <img src="Screenshot 2024-07-27 130432.png" alt="Captured img" class="result-img">
+            <img src="image_1.jpg" alt="Captured img" class="result-img">
+            <img src="image_2.jpg" alt="Captured img" class="result-img">
         </div>
 
         <div id="conclusion" class="section">
@@ -239,12 +345,15 @@
 
         <div id="certificate" class="section">
             <h2>Certificate</h2>
-            <img src="certificate.png" alt="Certificate">
+            <button class="btn-show-certificate" >Show Certificate</button>
+
         </div>
+    </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Your Name | All rights reserved.</p>
     </footer>
 </body>
+
 </html>
