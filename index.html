@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
+            background-color: #f0f2f5;
             color: #333;
             padding: 2%;
             line-height: 1.6;
@@ -22,32 +22,40 @@
 
         /* Buttons for Section Headings */
         .btn-section {
-            display: block;
-            width: 100%;
-            padding: 10px 0;
-            margin-bottom: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
             background-color: #007bff;
             color: white;
             text-align: center;
             text-decoration: none;
             font-weight: bold;
             border: none;
-            border-radius: 5px;
-            font-size: 18px;
+            border-radius: 25px;
+            font-size: 14px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .btn-section:hover {
             background-color: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* Main Container */
         #main {
             background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 40px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        #main:hover {
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
         }
 
         /* Heading Styles */
@@ -56,6 +64,23 @@
             color: #007bff;
             text-align: center;
             margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 4px solid #007bff;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            margin-bottom: 10px;
         }
 
         h4, h5 {
@@ -67,7 +92,7 @@
         p {
             margin-bottom: 20px;
             text-align: justify;
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         /* Styling sections */
@@ -76,11 +101,13 @@
             padding: 20px;
             border-left: 5px solid #007bff;
             background-color: #f9f9fb;
+            border-radius: 5px;
         }
 
         /* Table of Contents for Quick Navigation */
         #toc {
             margin-bottom: 40px;
+            text-align: center;
         }
 
         /* Image Styling */
@@ -88,7 +115,16 @@
             width: 80%;
             display: block;
             margin: 20px auto;
-            border: 5px solid #333;
+            border: 3px solid #333;
+            border-radius: 10px;
+        }
+
+        /* Certificate Image Styling */
+        #certificate img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #007bff;
             border-radius: 10px;
         }
 
@@ -113,57 +149,29 @@
 <body>
 
     <div id="toc">
-        <button class="btn-section" onclick="document.getElementById('abstract').scrollIntoView();">Go to Abstract</button>
-        <button class="btn-section" onclick="document.getElementById('intro').scrollIntoView();">Go to Introduction</button>
-        <button class="btn-section" onclick="document.getElementById('obj').scrollIntoView();">Go to Objectives</button>
-        <button class="btn-section" onclick="document.getElementById('tools').scrollIntoView();">Go to Tools & Technologies</button>
-        <button class="btn-section" onclick="document.getElementById('code').scrollIntoView();">Go to Code Structure</button>
-        <button class="btn-section" onclick="document.getElementById('result').scrollIntoView();">Go to Result</button>
-        <button class="btn-section" onclick="document.getElementById('conclusion').scrollIntoView();">Go to Conclusion</button>
-        <button class="btn-section" onclick="document.getElementById('references').scrollIntoView();">Go to References</button>
+        <button class="btn-section" onclick="document.getElementById('abstract').scrollIntoView();">Abstract</button>
+        <button class="btn-section" onclick="document.getElementById('intro').scrollIntoView();">Introduction</button>
+        <button class="btn-section" onclick="document.getElementById('obj').scrollIntoView();">Objectives</button>
+        <button class="btn-section" onclick="document.getElementById('tools').scrollIntoView();">Tools & Technologies</button>
+        <button class="btn-section" onclick="document.getElementById('code').scrollIntoView();">Code Structure</button>
+        <button class="btn-section" onclick="document.getElementById('result').scrollIntoView();">Result</button>
+        <button class="btn-section" onclick="document.getElementById('conclusion').scrollIntoView();">Conclusion</button>
+        <button class="btn-section" onclick="document.getElementById('references').scrollIntoView();">References</button>
     </div>
 
     <div id="main">
         <div id="abstract" class="section">
             <h2>Abstract</h2>
             <p>
-                In the digital era, the ability to capture and process images and videos has become increasingly important for various applications, ranging from personal documentation to security.br This project presents a Python-based application that leverages OpenCV to 
-                capture images and videos from a webcam, providing features such as real-time filtering and timestamping. 
-                The application allows users to interactively capture still images, record videos, and apply visual effects, 
-                enhancing the overall user experience. Key functionalities include the application of grayscale and sepia filters, 
-                alongside a timestamp display on captured media. By offering a user-friendly interface and flexible options for media 
-                capture, this application serves as a valuable tool for both personal and professional use, demonstrating the capabilities 
-                of modern computer vision technology. Future enhancements may include the addition of more filters, a graphical user interface (GUI), 
-                and improved video quality settings.            </p>
+                In the digital era, the ability to capture and process images and videos has become increasingly important for various applications. This project presents a Python-based application that leverages OpenCV to capture images and videos from a webcam, providing features such as real-time filtering and timestamping. Key functionalities include grayscale and sepia filters, alongside a timestamp display on captured media.
+            </p>
         </div>
 
         <div id="intro" class="section">
             <h2>Introduction</h2>
             <p>
-In today's fast-paced digital world, the significance of visual media has surged dramatically. From social media interactions to remote 
-working solutions and surveillance systems, images and videos play an essential role in communication, documentation, and security. As technology 
-continues to evolve, the accessibility of high-quality image and video capturing tools has become paramount. Webcams, now ubiquitous in personal 
-computers, laptops, and mobile devices, provide a convenient means to capture real-time media. This project focuses on developing an application 
-that utilizes these built-in cameras to capture images and record videos while enhancing the user experience through features such as filtering 
-and timestamping. The primary objective of the Webcam Image and Video Capture Application is to create a versatile tool that enables users to 
-harness the power of their webcams for various purposes, including photography, video recording, and content creation. Built using Python, a 
-widely-used programming language, and OpenCV, a powerful open-source computer vision library, the application allows for real-time image 
-processing and manipulation. With these technologies, users can easily access webcam functionalities, transforming their devices into fully 
-capable multimedia tools. One of the standout features of this application is its ability to apply different filters to captured frames. 
-Filters like grayscale and sepia can significantly alter the visual aesthetic of images and videos, allowing users to express their creativity 
-and customize their media. Grayscale filtering simplifies the image data by removing color information, providing a classic and timeless appearance. 
-In contrast, the sepia filter introduces a warm, vintage effect that evokes nostalgia and can enhance the storytelling aspect of captured media. 
-Additionally, the application integrates timestamp functionality, which displays the current date and time directly on the captured images and 
-videos. This feature not only aids in organization and documentation but also adds a professional touch to the captured media, making it easier 
-for users to recall when specific content was created. The interactive nature of the application is designed to provide a seamless user experience. 
-Users can initiate image capture, video recording, and filter application through simple keyboard commands, allowing for quick and efficient 
-media management. This responsiveness is particularly beneficial in scenarios where timing is critical, such as during events or while recording 
-spontaneous moments. In summary, the Webcam Image and Video Capture Application represents a convergence of accessibility, creativity, and 
-functionality. By utilizing Python and OpenCV, this project provides users with a powerful tool to capture and manipulate media using their
-webcams. As we continue to advance into a visually driven society, applications like this become increasingly relevant, enabling individuals
-to document their lives, express their creativity, and leverage technology for various multimedia purposes. Future enhancements may focus on
-expanding filter options, implementing advanced image processing techniques, and creating a more intuitive graphical user interface (GUI) 
-to further enrich the user experience.            </p>
+                In today's fast-paced digital world, visual media has become essential for communication and documentation. This project focuses on developing a webcam-based image and video capture application using Python and OpenCV, offering filters like grayscale and sepia, as well as timestamp functionality for enhanced media control and creativity.
+            </p>
         </div>
 
         <div id="obj" class="section">
@@ -198,7 +206,7 @@ to further enrich the user experience.            </p>
                 <li>Webcam Capture: Capturing video from the webcam using OpenCV's VideoCapture class.</li>
                 <li>Image Filtering: Applying filters like Grayscale and Sepia to the captured frames.</li>
                 <li>Timestamp Addition: Displaying the current date and time on the captured images and videos.</li>
-                <li>Grayscale:Converts the image to grayscale, enhancing contrast and simplifying image data.</li>
+                <li>Grayscale: Converts the image to grayscale, enhancing contrast and simplifying image data.</li>
             </ol>
         </div>
 
@@ -225,20 +233,15 @@ to further enrich the user experience.            </p>
                 <li>OpenCV Documentation</li>
                 <li>Python Documentation</li>
                 <li>NumPy Documentation</li>
-                <li>Datetime Documentation </li>
+                <li>Datetime Documentation</li>
             </ol>
         </div>
-    
 
-
-        <div id="references" class="section">
-        <h2>Certificate</h2>
-        <img src="certificate.png" alt="certificate">
-      
+        <div id="certificate" class="section">
+            <h2>Certificate</h2>
+            <img src="certificate.png" alt="Certificate">
+        </div>
     </div>
-</div>
-
-
 
     <footer>
         <p>&copy; 2024 Your Name | All rights reserved.</p>
