@@ -106,6 +106,11 @@
     transform: scale(1.05);
 }
 
+#new:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
         /* Buttons for Section Headings */
         .btn-section {
             display: inline-block;
@@ -152,7 +157,7 @@
 
         /* Main Container */
         #main {
-            background-color: white;
+            background: linear-gradient(135deg, #007bff, #28a745);
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -232,6 +237,9 @@
         padding-left: 3%;
         padding-bottom: 5%;
     }
+    .result-img1{
+        width: 100%;
+    }
 
 
 
@@ -267,21 +275,21 @@
     <div id="main">
         <!-- Rest of the sections: Abstract, Introduction, etc. -->
         <div id="abstract" class="section">
-            <h2>Abstract</h2>
+            <h2 id ="new"><center>Abstract</center></h2>
             <p>
                 In the digital era, the ability to capture and process images and videos has become increasingly important for various applications. This project presents a Python-based application that leverages OpenCV to capture images and videos from a webcam, providing features such as real-time filtering and timestamping. Key functionalities include grayscale and sepia filters, alongside a timestamp display on captured media.
             </p>
         </div>
 
         <div id="intro" class="section">
-            <h2>Introduction</h2>
+            <h2 id ="new"><center>Introduction</center></h2>
             <p>
                 In today's fast-paced digital world, visual media has become essential for communication and documentation. This project focuses on developing a webcam-based image and video capture application using Python and OpenCV, offering filters like grayscale and sepia, as well as timestamp functionality for enhanced media control and creativity.
             </p>
         </div>
 
         <div id="obj" class="section">
-            <h2>Objectives</h2>
+            <h2 id ="new"><center>Objectives</center></h2>
             <p>
                 The primary objectives of this project are:<br>
                 1. To develop a user-friendly application for capturing images and videos.<br>
@@ -291,7 +299,7 @@
         </div>
 
         <div id="tools" class="section">
-            <h2>Tools & Technologies</h2>
+            <h2 id ="new"><center>Tools & Technologies</center></h2>
             <ol>
                 <li>Programming Language: Python</li>
                 <li>Libraries:
@@ -306,7 +314,7 @@
         </div>
 
         <div id="code" class="section">
-            <h2>Code Structure</h2>
+            <h2 id ="new"><center>Code Structure</center></h2>
             <p>The key components of the code are:</p>
             <ol>
                 <li>Webcam Capture: Capturing video from the webcam using OpenCV's VideoCapture class.</li>
@@ -317,24 +325,24 @@
         </div>
 
         <div id="result" class="section">
-            <h2>Result</h2>
+            <h2 id ="new"><center>Result</center></h2>
             <p>
                 The application successfully captures images and videos from the webcam while allowing users to apply filters and add timestamps. Users can save media in their desired format, making it a versatile tool for both personal and professional use.
             </p>
-            <img src="Screenshot 2024-07-27 130432.png" alt="Captured img" class="result-img">
+            <img src="Screenshot 2024-07-27 130432.png" alt="Captured img" class="result-img1">
             <img src="image_1.jpg" alt="Captured img" class="result-img">
             <img src="image_2.jpg" alt="Captured img" class="result-img">
         </div>
 
         <div id="conclusion" class="section">
-            <h2>Conclusion</h2>
+            <h2 id ="new"><center>Conclusion</center></h2>
             <p>
                 This project demonstrates the power of Python and OpenCV in creating interactive media capture applications. With features like filters and timestamps, it adds significant value for various uses. Future enhancements could include a GUI, additional filters, and higher-resolution video capture options.
             </p>
         </div>
 
         <div id="references" class="section">
-            <h2>References</h2>
+            <h2 id ="new"><center>References</center></h2>
             <ol>
                 <li>OpenCV Documentation</li>
                 <li>Python Documentation</li>
@@ -344,16 +352,23 @@
         </div>
 
         <div id="certificate" class="section">
-            <h2>Certificate</h2>
-            <button class="btn-show-certificate" >Show Certificate</button>
+            <h2 id ="new"><center>Certificate</center></h2>
+            <button class="btn-show-certificate" onclick="nextpage()" >Show Certificate</button>
 
         </div>
     </div>
     </div>
+    
 
     <footer>
-        <p>&copy; 2024 Your Name | All rights reserved.</p>
+        <p>&copy; 2024 Y MADHU KUMAR | All rights reserved.</p>
     </footer>
+
+    <script>
+        function nextpage() {
+            window.location.href = 'page3.html'; // Replace 'nextpage.html' with the URL of the next page
+        }
+    </script>
 </body>
 
 </html>
