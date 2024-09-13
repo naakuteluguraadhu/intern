@@ -289,22 +289,32 @@
     }
 
     .styled-paragraph {
-        font-family: 'Georgia', serif; /* Elegant serif font */
-            font-size: 18px; /* Larger font size for better readability */
-            line-height: 1.6; /* Improved readability */
-            color: #333; /* Dark grey text for contrast */
-            background-color: #f9f9f9; /* Light background for contrast */
-            border-left: 4px solid #007BFF; /* Blue left border for emphasis */
-            padding: 20px; /* Spacing inside the paragraph */
-            margin: 20px 0; /* Spacing outside the paragraph */
-            border-radius: 5px; /* Rounded corners for a softer look */
-            text-align: justify;
-        }
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: justify;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.styled-paragraph:hover {
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    background-color: #e0f7fa; /* Change to a light blue color on hover */
+    color: #00796b; /* Change text color on hover */
+}
+
 
         .styled-paragraph br {
             content: "";
             margin: 10px 0; /* Space after line breaks */
         }
+
 </style>
 
 </head>
@@ -328,10 +338,10 @@
         <button class="btn-section" onclick="document.getElementById('obj').scrollIntoView();">Objectives</button>
         <button class="btn-section" onclick="document.getElementById('tools').scrollIntoView();">Tools & Technologies</button>
         <button class="btn-section" onclick="document.getElementById('code').scrollIntoView();">Code Structure</button>
-        <button class="btn-section" onclick="document.getElementById('result').scrollIntoView();">Result</button>
-        <button class="btn-section" onclick="document.getElementById('conclusion').scrollIntoView();">Conclusion</button>
-        <button class="btn-section" onclick="document.getElementById('references').scrollIntoView();">References</button>
-        <!-- <button class="btn-section" onclick="document.getElementById('certificate').scrollIntoView();">Certificate</button> -->
+        <button class="btn-section" onclick="document.getElementById('User_interactions').scrollIntoView();">User Interactions</button>
+        <button class="btn-section" onclick="document.getElementById('Usage_instructions').scrollIntoView();">User Interactions</button>
+
+
     </div>
 
     <!-- Main content continues here -->
@@ -404,32 +414,63 @@
         <div id="tools" class="section">
             <h2 id ="new"><center>Tools & Technologies</center></h2>
             
-                <p class="styled-paragraph">Programming Language: Python</p>
-                <p class="styled-paragraph">Libraries:
+                <p class="styled-paragraph"><b>Programming Language: </b>Python</p>
+                <p class="styled-paragraph"><b>Libraries:</b>
                    
-                        OpenCV (cv2) for image and video processing <br>
-                        NumPy for numerical operations
-                        Datetime for handling timestamps
+                        OpenCV (cv2) for image and video processing ,
+                        NumPy for numerical operations ,
+                        Datetime for handling timestamps .
                 </p>
                 
-                <p class="styled-paragraph"> Operating System: Compatible with Windows, macOS, and Linux</p>
+                <p class="styled-paragraph"> <b>Operating System:</b> Compatible with Windows, macOS, and Linux</p>
             
         </div>
 
         <div id="code" class="section">
             <h2 id ="new"><center>Code Structure</center></h2>
-            <p class="styled-paragraph">The key components of the code are:</p>
-            <ol>
-                <li>Webcam Capture: Capturing video from the webcam using OpenCV's VideoCapture class.</li>
-                <li>Image Filtering: Applying filters like Grayscale and Sepia to the captured frames.</li>
-                <li>Timestamp Addition: Displaying the current date and time on the captured images and videos.</li>
-                <li>Grayscale: Converts the image to grayscale, enhancing contrast and simplifying image data.</li>
-            </ol>
+            <p class="styled-paragraph"><b>The key components of the code are:</b></p>
+            
+                <p class="styled-paragraph"><b>Webcam Capture:</b> Capturing video from the webcam using OpenCV's VideoCapture class.</p>
+                <p class="styled-paragraph"><b>Image Filtering:</b> Applying filters like Grayscale and Sepia to the captured frames.</p>
+                <p class="styled-paragraph"><b>Timestamp Addition:</b> Displaying the current date and time on the captured images and videos.</p>
+                <p class="styled-paragraph"><b>Grayscale: </b>Converts the image to grayscale, enhancing contrast and simplifying image data.</p>
+            
         </div>
+
+        <div id="User_interactions" class="section">
+            <h2 id ="new"><center>User Interactions</center></h2>
+            <p class="styled-paragraph">
+                <b>The application listens for specific key presses:</b>
+            </p>
+
+            <p class="styled-paragraph"><b>q:</b> Quit the application.</p>
+            <p class="styled-paragraph"> <b>s:</b> Save the current frame as an image in the specified output folder.
+            <p class="styled-paragraph"><b>v:</b>Start or stop video recording. If recording, the application saves the video in AVI format.</p>
+            <p class="styled-paragraph"><b>f:</b> Cycle through the available filters (grayscale, sepia, none).</p>
+            </p>
+              
+        </div>
+
+
+
+        <div id="Usage_instructions" class="section">
+            <h2 id ="new"><center>Usage Instructions</center></h2>
+            <p class="styled-paragraph">
+                <b>Running the Application:</b>
+            </p>
+            <p class="styled-paragraph">The user is prompted to enter the directory where images and videos will be saved.</p>
+            <p class="styled-paragraph">The webcam feed is displayed in a window.</p>
+            <p class="styled-paragraph">Press 's' to save the current frame as an image. The images are saved in the specified output folder.</p>
+            <p class="styled-paragraph">Press 'v' to start or stop video recording. The recorded videos are saved in the specified output folder with a timestamped filename.</p>
+            <p class="styled-paragraph">Press 'f' to apply filters to the webcam feed. The filters can be cycled through (none, grayscale, sepia).</p>
+            <p class="styled-paragraph">Press 'q' to quit the application.</p>
+              
+        </div>
+
 
         <div id="result" class="section">
             <h2 id ="new"><center>Result</center></h2>
-            <p>
+            <p class="styled-paragraph">
                 The application successfully captures images and videos from the webcam while allowing users to apply filters and add timestamps. Users can save media in their desired format, making it a versatile tool for both personal and professional use.
             </p>
             <img src="Screenshot 2024-07-27 130432.png" alt="Captured img" class="result-img1">
@@ -439,24 +480,24 @@
 
         <div id="conclusion" class="section">
             <h2 id ="new"><center>Conclusion</center></h2>
-            <p>
+            <p class="styled-paragraph">
                 This project demonstrates the power of Python and OpenCV in creating interactive media capture applications. With features like filters and timestamps, it adds significant value for various uses. Future enhancements could include a GUI, additional filters, and higher-resolution video capture options.
             </p>
         </div>
 
         <div id="references" class="section">
             <h2 id ="new"><center>References</center></h2>
-            <ol>
-                <li>OpenCV Documentation</li>
-                <li>Python Documentation</li>
-                <li>NumPy Documentation</li>
-                <li>Datetime Documentation</li>
-            </ol>
+        
+            <p class="styled-paragraph">OpenCV Documentation</p>
+            <p class="styled-paragraph">Python Documentation</p>
+            <p class="styled-paragraph">NumPy Documentation</p>
+            <p class="styled-paragraph">Datetime Documentation</p>
         </div>
 
         <div id="certificate" class="section">
             <h2 id ="new"><center>Certificate</center></h2>
             <button class="btn-show-certificate" onclick="nextpage()" >Show Certificate</button>
+            <button class="btn-show-certificate" onclick="nextpage1()" >Github</button>
 
         </div>
     </div>
